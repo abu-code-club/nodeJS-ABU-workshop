@@ -3,20 +3,23 @@
         <meta charset="UTF-8">
         <title>Sign Up</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/styles.css">
-        <style>
-            body { padding-top:50px; }
-        </style>
-        script(src='./app.js')
+        script
+            include ../Helpers/app.js
+        style
+            include ../Helpers/styles.css
     </head>
     <body>
-        <h1>Sign up</h1>
-        <form method="POST" action="/Add-User">
-            <input placeholder="Name" name="name" required>
-            <input placeholder="Surname" name="surname" type="password" required>
-            <input placeholder="Username" name="username" required>
-            <input placeholder="password" name="password" type="password" required>
-            <button type="submit">Sign up</button>
-        </form>
+        <div class="container body-push">
+            <div class="jumbotron">
+                <h1>Sign up</h1>
+                <form method="POST" action="/Add-User" onsubmit="return validation()">
+                    <input class="form-control userform-margin" placeholder="Name" name="name" required>
+                    <input class="form-control userform-margin" placeholder="Surname" name="surname"  required>
+                    <input id="username" class="form-control userform-margin" placeholder="Username" name="username" required>
+                    <input id="password" class="form-control userform-margin" placeholder="password" name="password" type="password" required>
+                    <button class="btn btn-dark userform-margin" type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 8080;
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 
-server.use(express.static('webpage/Helpers'));
+// server.use(express.static('webpage/Helpers'));
 server.set('views', path.join(__dirname, '/webpage/views'));
 server.set('view engine', 'pug')
 
@@ -22,11 +22,16 @@ server.get('/', (req, res) => {
 })
 
 server.get('/login', (req,res) => {
-    res.render('login')
+
+    res.render('login',{login:'Login'})
 })
 
 server.get('/signup', (req,res) => {
     res.render('signup')
+})
+
+server.post('/Add-User', (req,res) => {
+    res.render('login',{login:'Welcome New User you can Login now'})
 })
 
 server.listen(PORT,() => {
