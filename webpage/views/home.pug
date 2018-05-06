@@ -4,18 +4,15 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/styles.css">
-    <style>
-        body { padding-top:50px; }
-    </style>
     script
         include ../Helpers/app.js
     style
         include ../Helpers/styles.css
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron body">
+    <div class="container body-push">
+        <div class="jumbotron">
+            <h1>ToDowi</h1>
             <button class="btn btn-dark" onclick="redirect('login')">Login</button>
             <button class="btn btn-dark" onclick="redirect('signup')">Sign Up</button>
         </div>

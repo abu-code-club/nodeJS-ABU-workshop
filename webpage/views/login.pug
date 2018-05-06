@@ -3,11 +3,13 @@
         <meta charset="UTF-8">
         <title>Login</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/static/styles.css">
-        script(src='./app.js')
+        script
+            include ../Helpers/app.js
+        style
+            include ../Helpers/styles.css
     </head>
     <body>
-        <h1> Login </h1>
+        <h1> #{login} </h1>
         <form method="POST" action="/Authorize">
             <input placeholder="Username" name="username" required>
             <input placeholder="password" name="password" type="password" required>
