@@ -10,20 +10,13 @@ const connection = mysql.createPool({
 })
 class SQLCommands {
     
-    constructor(){
+    constructor(){}
 
-    }
+    addTodo() { return "INSERT INTO todo (username, todo) VALUES (?, ?)"; }
 
-    addTodo() {
-        return "INSERT INTO todo (username, todo) VALUES (?, ?)";
-    }
+    renderTODO() { return "SELECT * FROM todo T where username = ?"; }
 
-    renderTODO() {
-        return "SELECT * FROM todo T where username = ?";
-    }
-    deleteTODO() {
-        return "DELETE FROM todo where id=?";
-    }
+    deleteTODO() { return "DELETE FROM todo where id=?"; }
 }
 
 module.exports.connection = connection;

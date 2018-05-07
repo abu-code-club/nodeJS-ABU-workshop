@@ -45,8 +45,4 @@ router.post('/delete-todo',(req,res) => {
     })
 });
 
-
-
-
-
-module.exports.router = router
+module.exports.router = router;
