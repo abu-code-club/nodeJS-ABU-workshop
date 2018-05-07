@@ -9,12 +9,16 @@ html
     title= title
   body
     <div class="container body-todo-push">
-        <input id="todo" class="control-form" placeholder="Add new">
-        <button class="btn" onclick="addNewTodo()">ADD</button>
+        <form method="POST" action="/add-todo">
+            <input name="todo" class="control-form" placeholder="Add new">
+             <button class="btn" type="submit">ADD</button>
+        </form>
         ul
             for item in results
                 <div>
-                  li= item
-                  <button class="btn" onclick="">remove</button>
+                    li= item.name
+                    <form method="POST" action="/delete-todo">
+                        <button type="submit" name="id" value="#{item.id}" class="btn">#{item.id}</button>
+                    </form>
                 </div>
     </div>
