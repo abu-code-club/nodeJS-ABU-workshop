@@ -1,10 +1,20 @@
 html
   head
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     script
         include ../Helpers/app.js
     style
         include ../Helpers/styles.css
     title= title
   body
-    h1= message
+    <div class="container body-todo-push">
+        <input id="todo" class="control-form" placeholder="Add new">
+        <button class="btn" onclick="addNewTodo()">ADD</button>
+        ul
+            for item in results
+                <div>
+                  li= item
+                  <button class="btn" onclick="">remove</button>
+                </div>
+    </div>
