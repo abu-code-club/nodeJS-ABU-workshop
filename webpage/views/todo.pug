@@ -13,10 +13,9 @@ html
             <input name="todo" class="control-form" placeholder="Add new">
              <button class="btn" type="submit">ADD</button>
         </form>
-        ul
-            for item in results
+            for item in todos
                 <div>
-                    li= item.name
+                    li= item.todo
                     <form method="POST" action="/delete-todo">
                         <button type="submit" name="id" value="#{item.id}" class="btn">#{item.id}</button>
                     </form>
