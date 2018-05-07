@@ -1,10 +1,11 @@
 
 
 class Todo{
-    constructor(todo){
-        this.id = Math.floor((Math.random() * 100) + 1);
-        this.todo = todo
+    constructor(id,username,todo){
+        this.id = id;
+        this.username = username;
+        this.todo = todo;
     }
 }
 
-module.exports.Todo = Todo
+module.exports.Todo = Todo;
