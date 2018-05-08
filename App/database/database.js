@@ -12,11 +12,17 @@ class SQLCommands {
     
     constructor(){}
 
-    addTodo() { return "INSERT INTO todo (username, todo) VALUES (?, ?)"; }
+    addTODO() { return "INSERT INTO todo (username, todo) VALUES (?, ?)"; }
 
     renderTODO() { return "SELECT * FROM todo T where username = ?"; }
 
     deleteTODO() { return "DELETE FROM todo where id=?"; }
+
+    addUser() { return "INSERT INTO users (username, password, name, surname) VALUES (?, ?, ?, ?)"; }
+
+    fetchUsers() { return "SELECT * FROM users"; }
+
+    getUser() { return "SELECT * FROM users WHERE username = ?"}
 }
 
 module.exports.connection = connection;

@@ -9,14 +9,14 @@ html
     title= title
   body
     <div class="container body-todo-push">
-        <form method="POST" action="/add-todo">
+        <form method="POST" action="/todo/add-todo">
             <input name="todo" class="control-form" placeholder="Add new">
              <button class="btn" type="submit">ADD</button>
         </form>
             for item in todos
                 <div>
                     li= item.todo
-                    <form method="POST" action="/delete-todo">
+                    <form method="POST" action="/todo/delete-todo">
                         <button type="submit" name="id" value="#{item.id}" class="btn">#{item.id}</button>
                     </form>
                 </div>
